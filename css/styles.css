@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    flex-direction: space-between;
+    border: 5px solid white;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+}
+
+    .header__article {
+        background-color: #490063;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+    }
+main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    min-height: 75%;
+}
+
+    .main__section-a {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+    }
+    .main__section-b {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.55rem;
+    }
+
+        .main__article-a, .main__article-b {
+            min-width: 100%;
+            height: 23%;
+        }
+
+        .main__article-a {
+            background: #FE96A8;
+        }
+
+    .main__article-b {
+        background: #B2018A;
+    }
+
+    .button {
+        background: #F42DAC;
+        width: 30%;
+        height: 100%;
+        border-radius: 50px;
+    }
+    
+footer {
+        background-color: #C1C99A;
+        min-height: 10%;
+        width: 100%;
+    }
+
+
+@media screen and (min-width: 600px) {
+    header {
+        justify-content: flex-start;
+        padding-left: 2rem;
+        height: 25%;
+    }
+
+    main {
+        height: 55%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 65% 35%;
+    }
+
+    footer {
+        height: 20%;
+    }
+
+    .main__section-a {
+        grid-column: auto / -1;
+        grid-row: auto / 2;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+
+    .main__article-a, .main__article-b {
+        min-width: 47%;
+        height: 45%;
+    }
+    
+    
+    .main__article-a:nth-child(1) {
+        order: 2;
+    }
+    .main__article-b:nth-child(2) {
+        order: 1;
+    }
+    .main__article-a:nth-child(3) {
+        order: 3;
+    }
+    .main__article-b:nth-child(4) {
+        order: 4;
+    }
+    
+    .main__section-b {
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+    }
+
+    .button {
+        background: #F42DAC;
+        height: 5rem;
+        border-radius: 30px;
+    }
+}
